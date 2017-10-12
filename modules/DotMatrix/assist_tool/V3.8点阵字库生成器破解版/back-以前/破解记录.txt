@@ -1,0 +1,95 @@
+下载的时候说是破解版的，可是实际上根本不是，居然还带了一个 迷你电话簿.rar，体积还不小，1.5m，气愤啊，自己来破
+
+
+upx壳。可以脱了跟，也可以esp定律直接到oem查字符串下断
+
+
+
+
+00505710       BA E4605000       mov edx,点阵字库.005060E4                 ; register.ini
+00505715       E8 1EF4EFFF       call 点阵字库.00404B38
+0050571A       8B4D F4           mov ecx,dword ptr ss:[ebp-C]
+0050571D       B2 01             mov dl,1
+0050571F       A1 B43C4700       mov eax,dword ptr ds:[473CB4]
+00505724       E8 3BE6F6FF       call 点阵字库.00473D64
+00505729       8BF0              mov esi,eax
+0050572B       68 FC605000       push 点阵字库.005060FC                    ; unregister
+00505730       8D45 EC           lea eax,dword ptr ss:[ebp-14]
+00505733       50                push eax
+00505734       B9 10615000       mov ecx,点阵字库.00506110                 ; name
+00505739       BA 20615000       mov edx,点阵字库.00506120                 ; register
+0050573E       8BC6              mov eax,esi
+00505740       8B38              mov edi,dword ptr ds:[eax]
+00505742       FF17              call dword ptr ds:[edi]
+00505744       8B55 EC           mov edx,dword ptr ss:[ebp-14]
+00505747       8D83 30040000     lea eax,dword ptr ds:[ebx+430]
+0050574D       E8 7AF1EFFF       call 点阵字库.004048CC
+00505752       6A 00             push 0
+00505754       8D45 E8           lea eax,dword ptr ss:[ebp-18]
+00505757       50                push eax
+00505758       B9 34615000       mov ecx,点阵字库.00506134                 ; sn
+0050575D       BA 20615000       mov edx,点阵字库.00506120                 ; register
+00505762       8BC6              mov eax,esi
+00505764       8B38              mov edi,dword ptr ds:[eax]
+00505766       FF17              call dword ptr ds:[edi]
+00505768       8B55 E8           mov edx,dword ptr ss:[ebp-18]
+0050576B       8D83 38040000     lea eax,dword ptr ds:[ebx+438]
+00505771       E8 56F1EFFF       call 点阵字库.004048CC
+00505776       8BC6              mov eax,esi
+00505778       E8 6FE3EFFF       call 点阵字库.00403AEC
+0050577D       8D55 E0           lea edx,dword ptr ss:[ebp-20]
+00505780       A1 E00E5100       mov eax,dword ptr ds:[510EE0]
+00505785       8B00              mov eax,dword ptr ds:[eax]
+00505787       E8 44DCFFFF       call 点阵字库.005033D0
+0050578C       8B45 E0           mov eax,dword ptr ss:[ebp-20]
+0050578F       8D55 E4           lea edx,dword ptr ss:[ebp-1C]
+00505792       E8 213DF0FF       call 点阵字库.004094B8
+00505797       8B55 E4           mov edx,dword ptr ss:[ebp-1C]
+0050579A       8D83 34040000     lea eax,dword ptr ds:[ebx+434]
+005057A0       E8 27F1EFFF       call 点阵字库.004048CC
+005057A5       8D45 DC           lea eax,dword ptr ss:[ebp-24]
+005057A8       50                push eax
+005057A9       A1 E00E5100       mov eax,dword ptr ds:[510EE0]
+005057AE       8B00              mov eax,dword ptr ds:[eax]
+005057B0       8B8B 30040000     mov ecx,dword ptr ds:[ebx+430]
+005057B6       8B93 34040000     mov edx,dword ptr ds:[ebx+434]
+005057BC       E8 6BDAFFFF       call 点阵字库.0050322C
+005057C1       8B55 DC           mov edx,dword ptr ss:[ebp-24]
+005057C4       8B83 38040000     mov eax,dword ptr ds:[ebx+438]
+005057CA       E8 A5F4EFFF       call 点阵字库.00404C74
+005057CF       74 2B             je short 点阵字库.005057FC
+005057D1       8D45 D8           lea eax,dword ptr ss:[ebp-28]
+005057D4       50                push eax
+005057D5       A1 E00E5100       mov eax,dword ptr ds:[510EE0]
+005057DA       8B00              mov eax,dword ptr ds:[eax]
+005057DC       8B8B 30040000     mov ecx,dword ptr ds:[ebx+430]
+005057E2       BA 40615000       mov edx,点阵字库.00506140                 ; ASCII "xiaoyyx"
+005057E7       E8 40DAFFFF       call 点阵字库.0050322C
+005057EC       8B55 D8           mov edx,dword ptr ss:[ebp-28]
+005057EF       8B83 38040000     mov eax,dword ptr ds:[ebx+438]
+005057F5       E8 7AF4EFFF       call 点阵字库.00404C74
+005057FA       75 33             jnz short 点阵字库.0050582F
+005057FC       C683 3C040000 01  mov byte ptr ds:[ebx+43C],1
+00505803       8D55 D4           lea edx,dword ptr ss:[ebp-2C]
+00505806       8BB3 F0020000     mov esi,dword ptr ds:[ebx+2F0]
+0050580C       8BC6              mov eax,esi
+0050580E       E8 4D69F4FF       call 点阵字库.0044C160
+00505813       8B55 D4           mov edx,dword ptr ss:[ebp-2C]
+00505816       8BC6              mov eax,esi
+00505818       E8 7369F4FF       call 点阵字库.0044C190
+0050581D       BA 50615000       mov edx,点阵字库.00506150                 ; 关于(&a)
+00505822       8B83 48030000     mov eax,dword ptr ds:[ebx+348]
+00505828       E8 BFDCFAFF       call 点阵字库.004B34EC
+0050582D       EB 4E             jmp short 点阵字库.0050587D
+0050582F       C683 3C040000 00  mov byte ptr ds:[ebx+43C],0
+00505836       8D55 D0           lea edx,dword ptr ss:[ebp-30]
+00505839       8BB3 F0020000     mov esi,dword ptr ds:[ebx+2F0]
+0050583F       8BC6              mov eax,esi
+00505841       E8 1A69F4FF       call 点阵字库.0044C160
+00505846       8D45 D0           lea eax,dword ptr ss:[ebp-30]
+00505849       BA 64615000       mov edx,点阵字库.00506164                 ; (未注册)
+
+下断，很快就跟到了
+
+     crack by 四有青年
+     18:50 2008-9-25
